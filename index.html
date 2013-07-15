@@ -1,123 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Zenboard</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<html>
+	<head>
 
-	<!--link rel="stylesheet/less" href="less/bootstrap.less" type="text/css" /-->
-	<!--link rel="stylesheet/less" href="less/responsive.less" type="text/css" /-->
-	<!--script src="js/less-1.3.3.min.js"></script-->
-	<!--append ‘#!watch’ to the browser URL, then refresh the page. -->
-	
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
+		<title>Quadro de Atividades - Ongoing - Ideais Tecnologia</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="estilo.css" rel="stylesheet" media="screen">
+		<script type="text/javascript" src="javaScripts/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="javaScripts/jsRest.js"></script>
+		
 
-  <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-  <![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Quadro de Atividades</h1>
+			</div>
 
-  <!-- Fav and touch icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
-  <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
-  <link rel="shortcut icon" href="img/favicon.png">
-  
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
-</head>
+			<div>
+				<table class="table table-bordered table table-striped" id="table">
+					<thead>
+						<tr>
+							<th>Dias</th>
+							<th>CAT</th>
+							<th>CKT</th>
+							<th>LC</th>
+							<th>AA</th>
+							<th>MAN</th>
+							<th>EAI</th>
+							<th>B2B</th>
+							<th>ADM</th>
+						</tr>
+					</thead>
 
-<body>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
-			<h1>
-				Zenboard
-			</h1>
-			<table class="table table-bordered">
-				<thead>
-					<tr>
-						<th>
-							Intervalo
-						</th>
-						<th>
-							Catálogo
-						</th>
-						<th>
-							Checkout
-						</th>
-						<th>
-							Manutenção
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							mais de 15 dias
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-					</tr>
-					<tr>
-						<td>
-							entre 10 e 15 dias
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-					</tr>
-					<tr>
-						<td>
-							entre 5 e 10 dias
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-					</tr>
-					<tr>
-						<td>
-							menos de 5 dias
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-						<td>
-							999
-						</td>
-					</tr>
-				</tbody>
-			</table>
+					<tbody>
+						<tr>
+							<th>+15</th>
+							<td id="cat15"></td>
+							<td id="ckt15"></td>
+							<td id="lc15"></td>
+							<td id="aa15"></td>
+							<td id="man15"></td>
+							<td id="eai15"></td>
+							<td id="b2b15"></td>
+							<td id="adm15"></td>
+						</tr>
+						<tr>
+							<th>+10</th>
+							<td id="cat10"></td>
+							<td id="ckt10"></td>
+							<td id="lc10"></td>
+							<td id="aa10"></td>
+							<td id="man10"></td>
+							<td id="eai10"></td>
+							<td id="b2b10"></td>
+							<td id="adm10"></td>
+						</tr>
+						<tr>
+							<th>+5</th>
+							<td id="cat5"></td>
+							<td id="ckt5"></td>
+							<td id="lc5"></td>
+							<td id="aa5"></td>
+							<td id="man5"></td>
+							<td id="eai5"></td>
+							<td id="b2b5"></td>
+							<td id="adm5"></td>
+						</tr>
+						<tr>
+							<th>0</th>
+							<td id="cat0"></td>
+							<td id="ckt0"></td>
+							<td id="lc0"></td>
+							<td id="aa0"></td>
+							<td id="man0"></td>
+							<td id="eai0"></td>
+							<td id="b2b0"></td>
+							<td id="adm0"></td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
 		</div>
-	</div>
-</div>
-</body>
+		<div align="center">
+			<img src="http://intranet/evolucao/images/logoInside.png" alt="Logo Ideais">
+			<p>&copy; Ideias Tecnologia 2013</p>
+		</div>
+
+	</body>
 </html>
