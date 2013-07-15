@@ -1,0 +1,11 @@
+{
+    "name" : "zenboard",
+    "preferGlobal" : false,
+    "version" : "0.1.0-dev",
+    "author" : "service.desk@ideais.com.br",
+    "description" : "A cool dashboard for Zendesk",
+    "repository" : {
+        "type" : "git",
+        "url" : "https://github.com/alexanderjardim/zenboard"
+    }
+}
