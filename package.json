@@ -8,10 +8,13 @@
         "type" : "git",
         "url" : "https://github.com/alexanderjardim/zenboard"
     },
+    "dependencies" : {
+        "express" : "3.0.0"
+    },
     "devDependencies": {
         "karma": "~0.8"
     },
     "scripts": {
-        "test": "karma start --single-run --browsers PhantomJS"
+        "test": "karma start test/conf/karma.conf.js --single-run --browsers PhantomJS"
     }   
 }
