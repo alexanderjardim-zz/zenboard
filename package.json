@@ -15,6 +15,6 @@
         "karma": "~0.8"
     },
     "scripts": {
-        "test": "karma start test/conf/karma.conf.js --single-run --browsers PhantomJS"
+        "test" : "node app.js; arma start test/conf/karma-e2e.js --browsers Chrome"
     }   
 }
