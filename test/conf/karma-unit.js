@@ -4,7 +4,9 @@ files = [
   JASMINE,
   JASMINE_ADAPTER,
   'public/*.js',
-  'test/unit/*.js'
+  'public/js/lib/*.js',
+  'test/unit/*.js',
+  'public/app/*.js'
 ];
 
 autoWatch = true;

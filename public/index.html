@@ -1,20 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 	<head>
 
 		<title>Quadro de Atividades - Ongoing - Ideais Tecnologia</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link href="css/bootstrap.css" rel="stylesheet" media="screen" />
-		<link href="css/estilo.css" rel="stylesheet" media="screen" />
+		<link href="css/style.css" rel="stylesheet" media="screen" />
+		<script type="text/javascript" src="js/lib/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular.js"></script>
 		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jsRest.js"></script>
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="app/controllers.js"></script>
 	</head>
-	<body>
+	<body ng-controller="ZDViewCtrl">
 		<div class="container">
 			<div class="jumbotron">
 				<h1>Quadro de Atividades</h1>
 			</div>
-
 			<div>
 				<table class="table table-bordered table-striped" id="table">
 					<thead>
@@ -33,7 +35,7 @@
 					<tbody>
 						<tr>
 							<th>+15</th>
-							<td id="cat15"></td>
+							<td id="cat15">{{tickets[0].count}}</td>
 							<td id="ckt15"></td>
 							<td id="lc15"></td>
 							<td id="aa15"></td>
