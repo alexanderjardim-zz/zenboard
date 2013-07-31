@@ -1,6 +1,5 @@
-'use strict';       
 
-describe("zenboard controllers", function() {
+/*describe("zenboard controllers", function() {
 	
 	describe("ZDViewCtrl", function() {
 
@@ -10,30 +9,30 @@ describe("zenboard controllers", function() {
 			expect(scope.tickets[0].count).toBe("1"); 
 		});
 	});
-}); 
-/*'use strict';   
+}); */
+
+'use strict';   
 
 describe("zenboard controllers", function() {
  
- describe("ZDViewCtrl", function() {
-    var scope, ctrl, $httpBackend;
-    beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
-      $httpBackend = _$httpBackend_;
-      $httpBackend.expectGET('views/29639836.json').
-          respond([{count: "21"}]);
- 
-      scope = $rootScope.$new();
-      ctrl = $controller(ZDViewCtrl, {$scope: scope});
-    }));
+	describe("ZDViewCtrl", function() {
+	    var scope, ctrl, $httpBackend;
+	    beforeEach(inject(function(_$httpBackend_, $rootScope, $controller) {
+	      	$httpBackend = _$httpBackend_;
+	      	$httpBackend.expectGET('views/29639836.json').
+	      	    respond([{count:'21'}]);
+	 
+	      	scope = $rootScope.$new();
+	      	ctrl = $controller(ZDViewCtrl, {$scope: scope});
 
+		  	
+	    }));
 
-	it('Valor da primeira celula da tabela deve ser 1', function() {
-	      expect(scope.tickets).toBeUndefined();
-	      $httpBackend.flush();
-
-	      expect(scope.tickets[0].count).toBe("1"); 
+	    it("Json", function() {
+			expect(scope.tickets).toBeUndefined();
+			$httpBackend.flush();
+      		expect(scope.tickets).toEqual([{count:'21'}]);
+		});
+		
 	});
-
-
-  });
-});*/
+});
